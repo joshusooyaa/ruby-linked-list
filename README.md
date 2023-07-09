@@ -41,6 +41,9 @@ otherwise
   set tail to node
 ```
 
+### `#contains?`
+Start at head and traverse until nil or until value found
+
 
 
 

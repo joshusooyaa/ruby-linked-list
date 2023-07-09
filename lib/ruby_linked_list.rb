@@ -6,7 +6,7 @@ ll = LinkedList.new
 ll.append(1)
 ll.append(3)
 ll.append(4)
-ll.append(5)
+ll.append(9)
 ll.prepend(5)
-ll.pop
-ll.print
+
+ll.print if ll.contains?(9)
