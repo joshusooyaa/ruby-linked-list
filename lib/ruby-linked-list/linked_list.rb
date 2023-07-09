@@ -39,4 +39,11 @@ class LinkedList
     end
     count
   end
+
+  def at(index)
+    count = 0
+    curr_node = @head
+    curr_node = curr_node&.next until (count += 1) > index
+    curr_node
+  end
 end
