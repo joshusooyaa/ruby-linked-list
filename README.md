@@ -2,6 +2,7 @@
 A simple singly linked list for practicing ruby
 
 # Pseudocode
+This will include all pseudocode for algorithms that require more thinking
 ### `#append(value)`
 ```
 if head is nil
@@ -22,4 +23,12 @@ else
   new node next = head
   head = new node
 ```
+
+### `#size`
+It would make most sense to have a size instance variable but for the sake of practice this will just go through the nodes - starts at head and counts until tail.next is nil
+
+
+
+
+
 
