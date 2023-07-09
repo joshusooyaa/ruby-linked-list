@@ -1,8 +1,8 @@
 class Node
   attr_accessor :value, :next
 
-  def initialize(value = nil, next_ = nil)
+  def initialize(value = nil)
     @value = value
-    @next = next_
+    @next = nil
   end
 end
