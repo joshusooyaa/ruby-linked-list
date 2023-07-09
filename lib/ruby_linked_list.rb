@@ -4,5 +4,5 @@ ll = LinkedList.new
 
 ll.append(1)
 p ll.head
-ll.append(2)
+ll.prepend(5)
 p ll.head
