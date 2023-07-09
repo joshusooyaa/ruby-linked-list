@@ -94,4 +94,12 @@ class LinkedList
     node_to_insert.next = curr_node.next
     curr_node.next = node_to_insert
   end
+
+  def shift
+    unless head.nil?
+      temp = @head.next
+      @head.next = nil
+      @head = temp
+    end
+  end
 end
