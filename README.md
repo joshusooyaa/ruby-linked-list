@@ -27,6 +27,19 @@ else
 ### `#size`
 It would make most sense to have a size instance variable but for the sake of practice this will just go through the nodes - starts at head and counts until tail.next is nil
 
+### `#pop`
+Since we don't have a previous pointer, we have to traverse to the end - 1
+We already have two methods that do the work for us though, so we can use these to avoid repeating code
+```
+if head = tail
+  head = tail = nil
+otherwise
+  get size
+  get index at size - 2 (this gets second to last element)
+  get node at index
+  set node->next nil
+  set tail to node
+```
 
 
 

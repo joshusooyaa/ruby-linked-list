@@ -46,4 +46,19 @@ class LinkedList
     curr_node = curr_node&.next until (count += 1) > index
     curr_node
   end
+
+  def pop
+    if @head == @tail
+      @head = @tail = nil
+    else
+      index = size - 2 # Get second to last element
+      node = at(index)
+      node.next = nil
+      @tail = node
+    end
+  end
+
+  def print
+    p @head
+  end
 end

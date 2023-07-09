@@ -2,10 +2,11 @@ require_relative './ruby-linked-list/linked_list'
 
 ll = LinkedList.new
 
-p ll.size
+
 ll.append(1)
-p ll.head
+ll.append(3)
+ll.append(4)
+ll.append(5)
 ll.prepend(5)
-p ll.head
-p ll.size
-p ll.at(3)
+ll.pop
+ll.print
