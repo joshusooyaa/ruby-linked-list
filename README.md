@@ -58,6 +58,20 @@ until node is nil
 add to string "nil" 
 ```
 
+### `#insert_at(value, index)`
+Must keep track of previous node -- that or we use find, but it wouldn't make sense to loop through again if we can keep track as we go through
+```
+if index is 0 (or less)
+  use prepend
+
+if index >= size
+  use append
+
+traverse through until we're at the node one before we want to insert
+set new node's next to node we're at's next
+set node we're at's next to new node
+```
+
 
 
 

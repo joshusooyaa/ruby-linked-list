@@ -82,4 +82,16 @@ class LinkedList
     end
     string.concat('nil')
   end
+
+  def insert_at(value, index)
+    return self.prepend(value) if index <= 0
+
+    return append(value) if index >= size
+
+    node_to_insert = Node.new(value)
+    curr_node = @head
+    (1...index).each { curr_node = curr_node.next }
+    node_to_insert.next = curr_node.next
+    curr_node.next = node_to_insert
+  end
 end
