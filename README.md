@@ -72,7 +72,7 @@ set new node's next to node we're at's next
 set node we're at's next to new node
 ```
 
-### `#remove_at(value, index)`
+### `#remove_at(index)`
 Very similar to insert_at
 ```
 if index is 0 (or less)
@@ -81,9 +81,9 @@ if index is 0 (or less)
 if index is >= size
   use pop
 
-traverse through until we're at the nodeo ne before we want to remove
-set current_node next to current nodes next's next
-set current node next's next to nil
+traverse through until we're at the node one before we want to remove
+set current_node next to node to remove's next
+set node to remove's next to nil
 ```
 
 ### `#shift`

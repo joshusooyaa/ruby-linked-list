@@ -88,18 +88,34 @@ class LinkedList
 
     return append(value) if index >= size
 
+    curr_node = find_one_before(index)
     node_to_insert = Node.new(value)
-    curr_node = @head
-    (1...index).each { curr_node = curr_node.next }
     node_to_insert.next = curr_node.next
     curr_node.next = node_to_insert
   end
 
   def shift
-    unless head.nil?
-      temp = @head.next
-      @head.next = nil
-      @head = temp
-    end
+    return if head.nil?
+
+    temp = @head.next
+    @head.next = nil
+    @head = temp
+  end
+
+  def remove_at(index)
+    return shift if index <= 0
+
+    return pop if index >= size
+
+    curr_node = find_one_before(index)
+    node_to_remove = curr_node.next
+    curr_node.next = node_to_remove.next
+    node_to_remove.next = nil
+  end
+
+  def find_one_before(index)
+    curr_node = @head
+    (1...index).each { curr_node = curr_node.next }
+    curr_node
   end
 end
