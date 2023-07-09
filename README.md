@@ -44,6 +44,12 @@ otherwise
 ### `#contains?`
 Start at head and traverse until nil or until value found
 
+### `#find`
+Start at head and traverse until nil or until value found\
+Keep track of current index\
+Notice this is repeating code from #contains?(value) -- with this, #contains?\(value) should utilize this method
+
+
 
 
 

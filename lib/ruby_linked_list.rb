@@ -10,3 +10,4 @@ ll.append(9)
 ll.prepend(5)
 
 ll.print if ll.contains?(9)
+puts ll.find(9)
