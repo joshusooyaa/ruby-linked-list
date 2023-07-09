@@ -9,5 +9,4 @@ ll.append(4)
 ll.append(9)
 ll.prepend(5)
 
-ll.print if ll.contains?(10)
-p ll.find(10)
+puts ll.to_s

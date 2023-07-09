@@ -49,6 +49,15 @@ Start at head and traverse until nil or until value found\
 Keep track of current index\
 Notice this is repeating code from #contains?(value) -- with this, #contains?\(value) should utilize this method
 
+### `#to_s`
+```
+node = head
+until node is nil
+  add to string "( value ) -> "
+
+add to string "nil" 
+```
+
 
 
 

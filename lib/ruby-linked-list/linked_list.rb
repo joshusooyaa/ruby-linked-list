@@ -73,7 +73,13 @@ class LinkedList
     end
   end
 
-  def print
-    p @head
+  def to_s
+    string = ''
+    curr_node = @head
+    until curr_node.nil?
+      string += "( #{curr_node.value} ) -> "
+      curr_node = curr_node.next
+    end
+    string.concat('nil')
   end
 end
